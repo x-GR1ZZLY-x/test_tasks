@@ -1,0 +1,9 @@
+build/
+build-*/
+*.exe
+*.out
+*.err
+.media_files
+.media_files.tmp
+test_home/
+test_media/
