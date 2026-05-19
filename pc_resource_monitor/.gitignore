@@ -1,0 +1,8 @@
+build/
+.cache/
+node_modules/
+web/app.js
+.DS_Store
+*.o
+*.obj
+*.exe

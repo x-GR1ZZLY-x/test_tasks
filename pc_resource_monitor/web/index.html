@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PC Resource Monitor</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>PC Resource Monitor</h1>
+          <p id="status">Connecting...</p>
+        </div>
+        <div class="clock">
+          <span id="updated">--:--:--</span>
+        </div>
+      </header>
+
+      <section class="summary" aria-label="System summary">
+        <article class="metric">
+          <div class="metric__head">
+            <span>CPU</span>
+            <strong id="cpu-total">0%</strong>
+          </div>
+          <div class="bar"><span id="cpu-bar"></span></div>
+        </article>
+
+        <article class="metric">
+          <div class="metric__head">
+            <span>Memory</span>
+            <strong id="mem-total">0%</strong>
+          </div>
+          <div class="bar"><span id="mem-bar"></span></div>
+          <small id="mem-text">0 / 0</small>
+        </article>
+
+        <article class="metric">
+          <div class="metric__head">
+            <span>Swap</span>
+            <strong id="swap-total">0%</strong>
+          </div>
+          <div class="bar"><span id="swap-bar"></span></div>
+          <small id="swap-text">0 / 0</small>
+        </article>
+
+        <article class="metric">
+          <div class="metric__head">
+            <span>Load average</span>
+            <div id="load-text" class="load-grid" aria-label="Load average values">
+              <span><small>1m</small><strong>0.00</strong></span>
+              <span><small>5m</small><strong>0.00</strong></span>
+              <span><small>15m</small><strong>0.00</strong></span>
+            </div>
+          </div>
+          <small id="uptime-text">Uptime 0s</small>
+        </article>
+      </section>
+
+      <section class="panel" aria-label="CPU cores">
+        <h2>CPU cores</h2>
+        <div id="cores" class="cores"></div>
+      </section>
+
+      <section class="panel" aria-label="Processes">
+        <h2>Processes</h2>
+        <div class="table-wrap">
+          <table class="process-table">
+            <colgroup>
+              <col class="col-pid">
+              <col>
+              <col class="col-state">
+              <col class="col-cpu">
+              <col class="col-memory">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>PID</th>
+                <th>Name</th>
+                <th>State</th>
+                <th>CPU</th>
+                <th>Memory</th>
+              </tr>
+            </thead>
+            <tbody id="processes"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

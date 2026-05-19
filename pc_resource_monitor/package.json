@@ -1,0 +1,11 @@
+{
+  "name": "pc-resource-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:web": "node ./node_modules/typescript/bin/tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "4.9.5"
+  }
+}
